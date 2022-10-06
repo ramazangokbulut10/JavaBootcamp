@@ -1,0 +1,45 @@
+ ===> ABSTRACT CLASS <===
+    Abstract(soyut) class'lar kendisinden obje olusturulamayacak class'lar icin Java'nin urettigi COZUM'dur.
+    Bir projeCC olusturmaya basladigimizda, bazi class'lari obje olusturmak amaciyla degil,objeleri gruplara
+    ayirmak ve genel ozellikleri belirlemek icin olustururuz.
+    Obje uretmemiz gereken child class'larda ise parent class'taki genel ozellikleri tasiyan ama kendisine
+    uyarlamasi gereken method'lari override ederk oznellestiren class'lar olustururuz.
+
+    ===> ABSTRACT METHOD <===
+    Abstract class'lar abstract method'larin olusturulmasina izin verir.
+    Bir method,bizim istedigimiz isi yapan bir robot gibidir.
+    Istedigimiz isi,istedigimiz sekilde yapabilmesi icin robot'a
+    - ne istedigimiz
+    - ve nasil yapmasini istedigimizi soyleriz.
+    Bir abstract method, MUTLAKA child class'lar tarafindan override edileceginden,method body'sine ihtiyac
+    yoktur.
+    Yani,abstract method,ne yapilmasi gerektigini belirler ama nasil yapilacagini,child class'da override
+    edecek method'a birakir.
+
+    ===> ABSTRACT CLASS KURALLARI <===
+    1 - Abstract class,child class'lari istedigimiz method'lari kullanmaya mecbur kilmak,ya da ortak ozelligi
+    olan child class'lari bir cati altinda toplamak icin kullanilir.
+    Concrete bir child class, parent'i olan abstract class'lardaki tum abstract method'lari implement etmelidir
+    diger turlu CTE olusur.
+    Abstract bir child class,parent'i olan abstract class'lardaki method'lari implement etmek ZORUNDA DEGILDIR.
+    Parent-child iliskisi ile tum method'lara ulasabilirler.
+    2 - Bir class'i veya method'u abstract  yapmak icin deklarasyona abstract yazmak yeterlidir.
+    Abstract olmayan method/class'lara concrete method/class denir.Ama method/class'lari ozellikle belirtmeye
+    gerek yoktur,abstract yazmiyorsa concrete'dir.
+    3 - Abstract class'lar constructor'a sahiptir ancak,abstract class'lardan OBJE URETILEMEZ.(can not be instantiated)
+    4 - Bir method abstract olarak belirlendiyse, mutlaka child class'lar tarafindan override edilmelidir.
+    Dolayisiyla abstract bir method'un body'sine ihtiyac yoktur.Abstract bir method'a body yazmaya calisirsaniz veya
+    concrete bir method'u body'siz yazmaya calisirsaniz Java CTE verir.
+    5 - Abstract bir class, abstract olmayan method'lara da sahip olabilir.
+    Abstract class icindeki concrete method'lar,child class'lar tarafindan override edilmek zorunda degildir.(opsiyonel)
+    6 - Abstract olmayan(concrete) bir class abstract method'lara sahip OLAMAZ.
+    7 - Bir method, abstract ve static keyword'lere ayni anda sahip olamaz.
+    8 - Abstract method'lar override edilmek icin kullanildiklarindan final olarak tanimlanamazlar.
+
+
+
+    bir class tan object olusturmayacaksanız o class ı sadece child classları
+    icin kural koyan bir class olusturmak istiyorsanız o zaman o class ı
+    abstract yaparsınız
+    abstract yapıp yapmamaya sonradan değil baslangıcta karar veriyoruz,
+    bu class abstract class olsun ve childleri icin kural koysun
